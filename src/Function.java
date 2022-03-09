@@ -16,6 +16,7 @@ public class Function {
     //a = cheakStudentInfo(123, students)
     //a[0] = “123”, a[1] = ”小明“， a[2] = "男"， a[3] = "18", a[4] = "2班"
     public String[] checkStudentInfo(int sID, ArrayList<Student> students){
+        return null;
 
     }
 
@@ -23,6 +24,7 @@ public class Function {
     //a = cheakCourseInfo(123, courses)
     //a[0] = “25”, a[1] = ”数据库“， a[2] = "3"
     public String[] checkCourseInfo(int cID, ArrayList<Course> courses){
+        return null;
 
     }
 
@@ -30,6 +32,7 @@ public class Function {
     //a = cheakChoiceInfo(123, students, courses, choices)
     //a[0] = “小明”, a[1] = ”数据库 98分“， a[2] = "数据结构 95分"
     public String[] checkChoiceInfo(int sID, ArrayList<Student> students, ArrayList<Course> courses, ArrayList<Choice>choices){
+        return null;
 
     }
 
@@ -37,6 +40,7 @@ public class Function {
     //a = cheakAverageScore(123, choices)
     //a = 95;
     public int checkAverageScore(int sID, ArrayList<Choice> choices ){
+        return 0;
 
     }
 
