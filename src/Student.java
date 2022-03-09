@@ -13,7 +13,4 @@ public class Student {
         this.in_class = in_class;
     }
 
-    public void showStudentInfo(int sId){
-
-    }
 }

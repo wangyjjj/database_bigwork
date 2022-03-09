@@ -9,7 +9,4 @@ public class Course {
         this.Course_points = course_points;
     }
 
-    public void showCourseInfo(int cID){
-
-    }
 }
