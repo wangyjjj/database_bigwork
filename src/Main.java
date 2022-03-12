@@ -5,6 +5,7 @@ public class Main {
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Course> courses = new ArrayList<>();
     static ArrayList<Choice> choices = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         LoadData(students, courses, choices);
         System.out.println("===========学生选课管理系统===========");
@@ -24,37 +25,76 @@ public class Main {
         Function fun = new Function();
         do {
             Scanner input = new Scanner(System.in);
+            System.out.print("请输入选择的功能:");
             command = input.nextInt();
             switch(command){
-                case '0': System.out.println("==============程序退出===============");
+                case 0:
+                    StoreData(students, courses, choices);
                     break;
-                case '1': System.out.println("============用学号查询学生信息========");
+                case 1:
+                    System.out.println("============用学号查询学生信息========");
+                    fun.checkStudentInfo(students);
+                    System.out.println("===================================");
                     break;
-                case '2': System.out.println("===========用课程号查询课程信息=======");
+                case 2:
+                    System.out.println("===========用课程号查询课程信息=======");
+                    fun.checkCourseInfo(courses);
+                    System.out.println("===================================");
                     break;
-                case '3': System.out.println("=用学号显示学生信息和所有课的名称和成绩=");
+                case 3:
+                    System.out.println("=用学号显示学生信息和所有课的名称和成绩=");
+                    fun.checkChoiceInfo(students, courses, choices);
+                    System.out.println("===================================");
                     break;
-                case '4': System.out.println("========用学号显示学生平局成绩=========");
+                case 4:
+                    System.out.println("========用学号显示学生平局成绩=========");
+                    fun.checkAverageScore(choices);
+                    System.out.println("===================================");
                     break;
-                case '5': System.out.println("========用学号删除该生基本信息========");
+                case 5:
+                    System.out.println("========用学号删除该生基本信息========");
+                    fun.deleteStudent(students);
+                    System.out.println("===================================");
                     break;
-                case '6': System.out.println("===根据学生ID 课程ID 修改学生成绩======");
+                case 6:
+                    System.out.println("===根据学生ID 课程ID 修改学生成绩======");
+                    fun.changeScore(choices);
+                    System.out.println("===================================");
                     break;
-                case '7': System.out.println("==============新增课程===============");
+                case 7:
+                    System.out.println("==============新增课程===============");
+                    fun.addCourse(courses);
+                    System.out.println("===================================");
                     break;
-                case '8': System.out.println("==============新增选项===============");
+                case 8:
+                    System.out.println("==============新增选课===============");
+                    fun.addChoice(choices);
+                    System.out.println("===================================");
                     break;
-                case '9': System.out.println("==============新增学生===============");
+                case 9:
+                    System.out.println("==============新增学生===============");
+                    fun.addStudent(students);
+                    System.out.println("===================================");
                     break;
                 default:
                     System.out.println("===============非法指令！=================");
+                    System.out.println("===================================");
+                    System.out.println("===================================");
+                    System.out.println("===================================");
+                    System.out.println("===================================");
             }
-        } while (command != '0');
+        } while (command != 0);
     }
 
     private static void LoadData(ArrayList<Student> students, ArrayList<Course> courses, ArrayList<Choice> choices){
         FIleLoader.LoadChoices(choices);
         FIleLoader.LoadCourses(courses);
         FIleLoader.LoadStudents(students);
+    }
+
+    private static void StoreData(ArrayList<Student> students, ArrayList<Course> courses, ArrayList<Choice> choices){
+        FIleLoader.storeChoices(choices);
+        FIleLoader.storeCourses(courses);
+        FIleLoader.storeStudents(students);
     }
 }
