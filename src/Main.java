@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//4:23
 public class Main {
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Course> courses = new ArrayList<>();
