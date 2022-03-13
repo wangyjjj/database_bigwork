@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-//4:23
+
 public class Main {
     static ArrayList<Student> students = new ArrayList<>();
     static ArrayList<Course> courses = new ArrayList<>();
@@ -15,7 +15,7 @@ public class Main {
         System.out.println("1 ----- 用学号查询学生信息");
         System.out.println("2 ----- 用课程号查询课程信息");
         System.out.println("3 ----- 用学号显示学生信息和所有课的名称和成绩");
-        System.out.println("4 ----- 用学号显示学生平局成绩");
+        System.out.println("4 ----- 用学号显示学生平均成绩");
         System.out.println("5 ----- 用学号删除该生基本信息");
         System.out.println("6 ----- 根据学生ID 课程ID 修改学生成绩");
         System.out.println("7 ----- 新增课程");
@@ -47,7 +47,7 @@ public class Main {
                     System.out.println("===================================");
                     break;
                 case 4:
-                    System.out.println("========用学号显示学生平局成绩=========");
+                    System.out.println("========用学号显示学生平均成绩=========");
                     fun.checkAverageScore(choices);
                     System.out.println("===================================");
                     break;

@@ -108,7 +108,7 @@ public class FIleLoader {
         try {
             PrintStream ps = new PrintStream(file);
             for (Choice cho : choices){
-                String str = String.valueOf(cho.sID) + String.valueOf(cho.cID) + String.valueOf(cho.score);
+                String str = String.valueOf(cho.sID) +"="+ String.valueOf(cho.cID) +"="+ String.valueOf(cho.score);
                 ps.println(str);
             }
             ps.close();
